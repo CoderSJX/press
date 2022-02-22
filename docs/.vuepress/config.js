@@ -1,5 +1,6 @@
 module.exports = {
     title:'idea小时',
+    dest:'dist',
     themeConfig: {
 
         sidebar: {
