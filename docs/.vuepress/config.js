@@ -7,7 +7,7 @@ module.exports = {
             '/summary/':[
                 '','LeetCode刷题记录','快速理解SSM三大流行框架'
             ],
-            '/stars/':['V2Ray使用方法和节点','dubbo'],
+            '/stars/':['前端那些Amazing的网站','dubbo'],
 
             '/': [
                 '',
@@ -18,7 +18,7 @@ module.exports = {
         logo:'/favicon.ico',
         nav: [
             { text: '主页', link: '/' },
-            { text: '收藏夹', link: '/stars/dubbo' },
+            { text: '收藏夹', link: '/stars/前端那些Amazing的网站' },
             { text: '资源', link: '/resources/' },
             { text: '推荐', link: '/recommend/' },
             { text: '经验总结', link: '/summary/' },
