@@ -164,6 +164,34 @@
 
 
 
+## Shape Divider
+
+**推荐指数：**:star::star::star::star::star:
+
+生成好看的形状背景。
+
+[Shape Divider](https://www.shapedivider.app/)
+
+![Shape Divider](../.vuepress/public/images/shape-divider.png)
+
+
+
+## Uigradients
+
+**推荐指数：**:star::star::star::star::star:
+
+渐变色神器。
+
+[Uigradients](https://uigradients.com/)
+
+![Uigradients](../.vuepress/public/images/uigradients.png)
+
+
+
+
+
+
+
 ## 不断更新中~~~
 
 会持续更新的，记得多回来看看。
