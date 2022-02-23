@@ -5,7 +5,7 @@ module.exports = {
 
         sidebar: {
             '/summary/':[
-                '','LeetCode刷题记录','快速理解SSM三大流行框架'
+                '变量命名规范','LeetCode刷题记录','快速理解SSM三大流行框架'
             ],
             '/stars/':['前端那些Amazing的网站','dubbo'],
 
