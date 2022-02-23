@@ -56,7 +56,7 @@
 
 [MDN Web Docs中文官网](https://developer.mozilla.org/zh-CN/docs/Web)
 
-![MDN](../.vuepress/public/images/MDN Web Docs.png)
+![MDN](../.vuepress/public/images/MDN-Web-Docs.png)
 
 
 
@@ -86,7 +86,7 @@
 
 [Apache ECharts中文官网](https://echarts.apache.org/zh/index.html)
 
-![Echarts](../.vuepress/public/images/Apache ECharts.png)
+![Echarts](../.vuepress/public/images/Apache-ECharts.png)
 
 
 
@@ -160,7 +160,7 @@
 
 [Google Fonts中文网站](http://www.googlefonts.cn/)
 
-![google-fonts](../.vuepress/public/images/Google Fonts.png)
+![google-fonts](../.vuepress/public/images/Google-Fonts.png)
 
 
 
