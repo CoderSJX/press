@@ -6,6 +6,16 @@
 
 给定一个字符串 `s` ，请你找出其中不含有重复字符的 **最长子串** 的长度
 
+##### 解释：
+
+1. left表示无重复字符子串的最左侧位置
+2. right表示当前遍历到的字符的位置
+3. res表示最长子串的长度
+4. window存储每个字符的上次出现位置
+5. left每次更新，都需要把重复字符的上一次位置上+1，因为重复字符的上一次位置可能在开始，并不一定就比现在的left大，所以需要取二者中较大的那个。
+6. 每次循环都能保证当前的left是无重复子串的开始，因此每次循环都计算一遍res。
+7. 滑动窗口的思想是不断扩大右边界，适时缩小左边界。所以在while循环中每次都要把right的元素放进window中。
+
 ```java
 package slidingwindow;
 
@@ -14,19 +24,22 @@ import java.util.Map;
 
 public class LongestSubStringWithNoDuplicates {
     public int lengthOfLongestSubstring(String s) {
-        if (s == null || s.isEmpty()) return 0;
+        if (s == null || s.length() == 0) return 0;
         if (s.length() == 1) return 1;
-        Map<Character, Integer> container = new HashMap<>();
+        Map<Character, Integer> window = new HashMap<>();
         int left = 0, right = 0;
         int res = 1;
-        while (right < s.length()) {
-            char c = s.charAt(right);
-            if (container.containsKey(c)) {
-                Integer pos = container.get(c);
-                res = Math.max(res, right - pos);
+        char[] chars = s.toCharArray();
+        while (right < chars.length) {
+            char cur = chars[right];
+            if (window.containsKey(cur)) {
+                left = Math.max(left, window.get(cur) + 1);
             }
-            container.put(c, right);
+            window.put(cur,right);
+            res=Math.max(res,right-left+1);
+            right++;
         }
+
         return res;
 
     }
