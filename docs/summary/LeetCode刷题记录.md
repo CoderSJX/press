@@ -47,6 +47,79 @@ public class LongestSubStringWithNoDuplicates {
 
 ```
 
+
+
+#### [76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)
+
+难度困难1679
+
+给你一个字符串 `s` 、一个字符串 `t` 。返回 `s` 中涵盖 `t` 所有字符的最小子串。如果 `s` 中不存在涵盖 `t` 所有字符的子串，则返回空字符串 `""` 。
+
+
+
+**注意：**
+
+- 对于 `t` 中重复字符，我们寻找的子字符串中该字符数量必须不少于 `t` 中该字符数量。
+- 如果 `s` 中存在这样的子串，我们保证它是唯一的答案。
+
+#####  解释：
+
+1. tTimes表示目标字符串各个字符的统计个数
+2. sTimes表示目标字符串中的各个字符在s中的统计个数，在t中没有的不进行统计。
+3. resLen表示最终结果的字符串长度，resLeft表示最终结果字符串的起始字符的位置。resLeft+resLen表示最终结果字符串的最后一个字符的的下一个字符的位置。
+4. distance表示sTimes中满足tTimes中字符的总个数。
+5. 要注意的是sTimes只统计t中存在的字符，不统计t中不存在的字符。
+6. 在右指针扩大的时候要whille，在左指针缩小的时候也要用while。因为左指针缩小的过程中，可能会产生更小的符合条件的字符串。
+7. 在左指针缩小的过程中，要同时减少sTimes，并且，如果左边被裁掉的是t中有的字符，那么distance也应该减少。
+
+```java
+public class MinCoverStr {
+    private int[] tTimes = new int[128];
+    private int[] sTimes = new int[128];
+
+    public String minWindow(String s, String t) {
+        int resLen = Integer.MAX_VALUE;
+        int resLeft = 0;
+        int left = 0, right = 0;
+        int distance = 0;
+        char[] charsT = t.toCharArray();
+        for (char c : charsT) {
+            tTimes[c]++;
+        }
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            if (tTimes[c] == 0) {
+                right++;
+                continue;
+            }
+            right++;
+            if (sTimes[c] < tTimes[c]) {
+                distance++;
+            }
+            sTimes[c]++;
+            while (distance == t.length()) {
+                if (right - left < resLen) {
+                    resLen = right - left;
+                    resLeft = left;
+                }
+                char delete = s.charAt(left);
+                if (tTimes[delete] != 0) {
+                    if (tTimes[delete] == sTimes[delete]) {
+                        distance--;
+                    }
+                    sTimes[delete]--;
+                }
+                left++;
+            }
+
+        }
+        return resLen == Integer.MAX_VALUE ? "" : s.substring(resLeft, resLeft + resLen);
+    }
+}
+```
+
+
+
 ## **[剑指 Offer II 076. 数组中的第 k 大的数字](https://leetcode-cn.com/problems/xx4gT2/)**
 
 难度中等7
