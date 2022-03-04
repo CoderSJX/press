@@ -8,7 +8,7 @@ module.exports = {
                 '变量命名规范','说说MySQL的那些日志','LeetCode刷题记录','快速理解SSM三大流行框架','Maven安装及设置'
             ],
             '/stars/':['前端那些Amazing的网站','程序员学习网站精选','学术研究类工具推荐','程序员的工具箱',],
-            '/small-white/':['常用电脑快捷键（Windows系统）',],
+            '/small-white/':['常用电脑快捷键（Windows系统）','电脑选购指南.md'],
 
             '/': [
                 '',
