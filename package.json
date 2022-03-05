@@ -10,6 +10,7 @@
   "author": "sjx",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^1.9.7"
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-fulltext-search": "^2.2.1"
   }
 }
