@@ -50,33 +50,34 @@ module.exports = {
     },
 
     // ...
-    plugins: ['fulltext-search', '@vuepress/back-to-top', '@vuepress/nprogress', '@vuepress/medium-zoom', '@vuepress/pwa', {
+    plugins: ['fulltext-search', '@vuepress/back-to-top', '@vuepress/nprogress', '@vuepress/medium-zoom', ['@vuepress/pwa', {
 
         serviceWorker: true,
         generateSWConfig: {
             globPatterns: [
                 '**\/*.{html,json,ico,css,js,png,jpg,jpeg,gif,svg,woff,woff2,eot,ttf,otf}',
             ],
+            //忽略编号为2000以上的的js文件
+            globIgnores: ['**\/[2-9][0-9][0-9][0-9].*.js'],
+            dontCacheBustUrlsMatching: /\.\w{8}\./
         },
-        updatePopup: {
-            message: "发现新内容可用",
-            buttonText: "刷新"
-        }
-    }, [
-        '@vuepress/last-updated',
-        {
-            transformer: (timestamp, lang) => {
-                // 不要忘了安装 moment
-                const moment = require('moment')
-                moment.locale(lang)
-                return moment(timestamp).fromNow()
+        updatePopup: true
+    }],
+        [
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp, lang) => {
+                    // 不要忘了安装 moment
+                    const moment = require('moment')
+                    moment.locale(lang)
+                    return moment(timestamp).fromNow()
+                }
             }
-        }
-    ], [
-        '@vuepress/google-analytics',
-        {
-            'ga': '' // UA-00000000-0
-        }
-    ]],
+        ], [
+            '@vuepress/google-analytics',
+            {
+                'ga': '' // UA-00000000-0
+            }
+        ]],
 
 }
