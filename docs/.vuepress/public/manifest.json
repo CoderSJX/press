@@ -7,11 +7,11 @@
   "scope": "/",
   "description": "idea小时 YYDS",
   "icons": [{
-    "src": "logo52.png",
+    "src": "logo52.jpg",
     "sizes": "52x52",
     "type": "image/jpg"
   },{
-    "src": "logo288.png",
+    "src": "logo288.jpg",
     "sizes": "288x288",
     "type": "image/jpg"
   }]
