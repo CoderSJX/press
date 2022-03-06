@@ -3,6 +3,7 @@ module.exports = {
     dest: 'dist',
 
     head: [
+        ['link', {rel: 'shortcut icon', type: "image/x-icon", href: `./favicon.ico`}],
         ['link', {rel: 'icon', href: '/logo.jpg'}],
         ['link', {rel: 'manifest', href: '/manifest.json'}],
         ['meta', {name: 'theme-color', content: '#409EFF'}],
@@ -33,7 +34,6 @@ module.exports = {
 
         },
 
-        logo: '/favicon.ico',
         nav: [
             {text: '主页', link: '/'},
             {text: '收藏夹', link: '/stars/前端那些Amazing的网站'},
