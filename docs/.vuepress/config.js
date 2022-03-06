@@ -51,7 +51,13 @@ module.exports = {
 
     // ...
     plugins: ['fulltext-search', '@vuepress/back-to-top', '@vuepress/nprogress', '@vuepress/medium-zoom', '@vuepress/pwa', {
+
         serviceWorker: true,
+        generateSWConfig:{
+            globPatterns: [
+                '**\/*.{html,json,ico,css,js,png,jpg,jpeg,gif,svg,woff,woff2,eot,ttf,otf}',
+            ],
+        },
         updatePopup: true
     }, [
         '@vuepress/last-updated',
