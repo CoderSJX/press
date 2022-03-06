@@ -53,12 +53,15 @@ module.exports = {
     plugins: ['fulltext-search', '@vuepress/back-to-top', '@vuepress/nprogress', '@vuepress/medium-zoom', '@vuepress/pwa', {
 
         serviceWorker: true,
-        generateSWConfig:{
+        generateSWConfig: {
             globPatterns: [
                 '**\/*.{html,json,ico,css,js,png,jpg,jpeg,gif,svg,woff,woff2,eot,ttf,otf}',
             ],
         },
-        updatePopup: true
+        updatePopup: {
+            message: "发现新内容可用",
+            buttonText: "刷新"
+        }
     }, [
         '@vuepress/last-updated',
         {
