@@ -59,7 +59,10 @@ module.exports = {
             ],
 
         },
-        updatePopup: true
+        updatePopup: {
+                message: "发现内容更新，快刷新看看吧",
+                buttonText: "点此刷新"
+        }
     }],
         [
             '@vuepress/last-updated',
