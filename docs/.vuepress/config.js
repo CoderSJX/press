@@ -7,11 +7,11 @@ module.exports = {
         ['link', {rel: 'manifest', href: '/manifest.json'}],
         ['meta', {name: 'theme-color', content: '#409EFF'}],
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
-        ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
+        ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'white'}],
         ['link', {rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.jpg'}],
         ['link', {rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#409EFF'}],
         ['meta', {name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.jpg'}],
-        ['meta', {name: 'msapplication-TileColor', content: '#000000'}]
+        ['meta', {name: 'msapplication-TileColor', content: '#ffffff'}]
     ],
     locales: {
         '/': {
