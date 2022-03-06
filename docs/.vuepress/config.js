@@ -52,10 +52,7 @@ module.exports = {
     // ...
     plugins: ['fulltext-search', '@vuepress/back-to-top', '@vuepress/nprogress', '@vuepress/medium-zoom', '@vuepress/pwa', {
         serviceWorker: true,
-        updatePopup: {
-            message: "发现新内容可用",
-            buttonText: "刷新"
-        }
+        updatePopup: true
     }, [
         '@vuepress/last-updated',
         {
