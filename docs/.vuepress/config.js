@@ -57,9 +57,7 @@ module.exports = {
             globPatterns: [
                 '**\/*.{html,json,ico,css,js,png,jpg,jpeg,gif,svg,woff,woff2,eot,ttf,otf}',
             ],
-            //忽略编号为2000以上的的js文件
-            globIgnores: ['**\/[2-9][0-9][0-9][0-9].*.js'],
-            dontCacheBustUrlsMatching: /\.\w{8}\./
+
         },
         updatePopup: true
     }],
