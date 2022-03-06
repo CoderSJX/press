@@ -1,6 +1,11 @@
 module.exports = {
     title: 'idea小时',
     dest: 'dist',
+    locales: {
+        '/': {
+            lang: 'zh-CN'
+        }
+    },
     themeConfig: {
 
         sidebar: {
@@ -30,6 +35,21 @@ module.exports = {
     },
 
     // ...
-    plugins: ['fulltext-search'],
+    plugins: ['fulltext-search', '@vuepress/back-to-top', '@vuepress/nprogress', '@vuepress/medium-zoom', [
+        '@vuepress/last-updated',
+        {
+            transformer: (timestamp, lang) => {
+                // 不要忘了安装 moment
+                const moment = require('moment')
+                moment.locale(lang)
+                return moment(timestamp).fromNow()
+            }
+        }
+    ], [
+        '@vuepress/google-analytics',
+        {
+            'ga': '' // UA-00000000-0
+        }
+    ]],
 
 }
