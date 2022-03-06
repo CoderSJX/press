@@ -4,7 +4,6 @@
   "display": "standalone",
   "background_color": "#fff",
   "start_url": "/",
-  "scope": "/",
   "description": "idea小时 YYDS",
   "icons": [{
     "src": "logo52.jpg",
