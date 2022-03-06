@@ -7,7 +7,7 @@ module.exports = {
         ['link', {rel: 'manifest', href: '/manifest.json'}],
         ['meta', {name: 'theme-color', content: '#409EFF'}],
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
-        ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'white'}],
+        ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'default'}],
         ['link', {rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.jpg'}],
         ['link', {rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#409EFF'}],
         ['meta', {name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.jpg'}],
@@ -43,7 +43,10 @@ module.exports = {
             {text: '电脑小白', link: '/small-white/常用电脑快捷键（Windows系统）'},
             {text: '情感分享', link: '/emotion/'},
             {text: 'Github', link: 'https://github.com/CoderSJX'},
-        ]
+        ],
+        lastUpdated: '上次更新',
+        smoothScroll: true
+
     },
 
     // ...
