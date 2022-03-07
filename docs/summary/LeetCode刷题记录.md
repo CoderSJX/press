@@ -118,7 +118,91 @@ public class MinCoverStr {
 }
 ```
 
+#### [567. 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)
 
+难度中等594
+
+给你两个字符串 `s1` 和 `s2` ，写一个函数来判断 `s2` 是否包含 `s1` 的排列。如果是，返回 `true` ；否则，返回 `false` 。
+
+换句话说，`s1` 的排列之一是 `s2` 的 **子串** 。
+
+ 
+
+**示例 1：**
+
+```
+输入：s1 = "ab" s2 = "eidbaooo"
+输出：true
+解释：s2 包含 s1 的排列之一 ("ba").
+```
+
+**示例 2：**
+
+```
+输入：s1= "ab" s2 = "eidboaoo"
+输出：false
+```
+
+ 
+
+**提示：**
+
+- `1 <= s1.length, s2.length <= 104`
+- `s1` 和 `s2` 仅包含小写字母
+
+##### 解释：
+
+1. target存放目标字符串中每个字符的个数
+2. window存放目标字符串中的每个字符在当前窗口的个数，不在目标字符串中的字符不进行统计。
+3. count统计目标字符串中不同字符的个数，也就是我们有几个字符需要满足，比方说：目标字符串为aabb，则count为2，因为只有a和b两字符，而不是4
+4. distance表示当前窗口有多少字符已经满足了要求
+5. 只有在window中某个字符的个数等于target中该字符的个数时，该字符才算满足，distance进行+1；
+6. 同时，在缩小左边界的时候，也只有target[charLeft] == window[charLeft]才回造成distance-1；
+
+```java
+public class CheckInclusion {
+    private int[] target = new int[128];
+    private int[] window = new int[128];
+
+    public boolean checkInclusion(String s1, String s2) {
+        char[] chars1 = s1.toCharArray();
+        for (char c : chars1) {
+            target[c]++;
+        }
+        int count = 0;
+        for (int i : target) {
+            if (i > 0) count++;
+        }
+        int left = 0, right = 0;
+        int distance = 0;
+        while (right < s2.length()) {
+            char cur = s2.charAt(right);
+            right++;
+            if (target[cur] > 0) {
+                window[cur]++;
+                if (target[cur] == window[cur]) {
+                    distance++;
+                }
+            }
+            while (right - left >= s1.length()) {
+                if (distance == count) {
+                    return true;
+                }
+                char charLeft = s2.charAt(left);
+                if (target[charLeft] > 0) {
+                    if (target[charLeft] == window[charLeft]) {
+                        distance--;
+                    }
+                    window[charLeft]--;
+                }
+                left++;
+            }
+
+        }
+        return false;
+    }
+}
+```
 
 ## **[剑指 Offer II 076. 数组中的第 k 大的数字](https://leetcode-cn.com/problems/xx4gT2/)**
 
