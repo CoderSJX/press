@@ -22,29 +22,29 @@ module.exports = {
         sidebarDepth: 2,
         sidebar: {
             '/summary/': [
-                'var-naming',
-                'leetcode-log',
-                'maven-setting',
-                'mysql-log',
-                'ssm-quick-guide',
+                'var-naming/',
+                'leetcode-log/',
+                'maven-setting/',
+                'mysql-log/',
+                'ssm-quick-guide/',
             ],
             '/stars/': [
-                'front-end-webs',
-                'web-for-coder-study',
-                'research-util',
-                'util-for-coder',
-                'v2ray',
+                'front-end-webs/',
+                'web-for-coder-study/',
+                'research-util/',
+                'util-for-coder/',
+                'v2ray/',
             ],
             '/small-white/': [
-                'guide-for-pc-buy',
-                'short-cut-for-windows'
+                'guide-for-pc-buy/',
+                'short-cut-for-windows/'
             ],
             '/recommend/': [
-                'house-rent',
+                'house-rent/',
             ],
             '/resources/': [
-                'library-for-coder',
-                'app-for-study',
+                'library-for-coder/',
+                'app-for-study/',
             ],
             '/': [
                 '',
@@ -55,11 +55,11 @@ module.exports = {
         logo: '/favicon.ico',
         nav: [
             {text: '首页', link: '/'},
-            {text: '网站收藏夹', link: '/stars/front-end-webs'},
-            {text: '资源分享', link: '/resources/library-for-coder'},
-            {text: '推荐与避坑', link: '/recommend/house-rent'},
-            {text: '编程之路', link: '/summary/var-naming'},
-            {text: '电脑小白', link: '/small-white/guide-for-pc-buy.md'},
+            {text: '网站收藏夹', link: '/stars/front-end-webs/'},
+            {text: '资源分享', link: '/resources/library-for-coder/'},
+            {text: '推荐与避坑', link: '/recommend/house-rent/'},
+            {text: '编程之路', link: '/summary/var-naming/'},
+            {text: '电脑小白', link: '/small-white/guide-for-pc-buy/'},
             {text: '情感分享', link: '/emotion/'},
             {text: 'Github', link: 'https://github.com/CoderSJX'},
         ],
