@@ -27,7 +27,7 @@ module.exports = {
             '/stars/': ['前端那些Amazing的网站', '程序员学习网站精选', '学术研究类工具推荐', '程序员的工具箱',],
             '/small-white/': ['常用电脑快捷键（Windows系统）', '电脑选购指南'],
             '/recommend/': ['租房避坑',],
-            '/resources':['程序员软件库','学习版APP'],
+            '/resources/':['程序员软件库','学习版APP'],
             '/': [
                 '',
             ]
