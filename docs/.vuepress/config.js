@@ -19,15 +19,33 @@ module.exports = {
         }
     },
     themeConfig: {
-
+        sidebarDepth: 2,
         sidebar: {
             '/summary/': [
-                '变量命名规范', '说说MySQL的那些日志', 'LeetCode刷题记录', '快速理解SSM三大流行框架', 'Maven安装及设置'
+                'var-naming',
+                'leetcode-log',
+                'maven-setting',
+                'mysql-log',
+                'ssm-quick-guide',
             ],
-            '/stars/': ['前端那些Amazing的网站', '程序员学习网站精选', '学术研究类工具推荐', '程序员的工具箱',],
-            '/small-white/': ['常用电脑快捷键（Windows系统）', '电脑选购指南'],
-            '/recommend/': ['租房避坑',],
-            '/resources/':['程序员软件库','学习版APP'],
+            '/stars/': [
+                'front-end-webs',
+                'web-for-coder-study',
+                'research-util',
+                'util-for-coder',
+                'v2ray',
+            ],
+            '/small-white/': [
+                'guide-for-pc-buy',
+                'short-cut-for-windows'
+            ],
+            '/recommend/': [
+                'house-rent',
+            ],
+            '/resources/': [
+                'library-for-coder',
+                'app-for-study',
+            ],
             '/': [
                 '',
             ]
@@ -37,11 +55,11 @@ module.exports = {
         logo: '/favicon.ico',
         nav: [
             {text: '首页', link: '/'},
-            {text: '网站收藏夹', link: '/stars/前端那些Amazing的网站'},
-            {text: '资源分享', link: '/resources/程序员软件库'},
-            {text: '推荐与避坑', link: '/recommend/租房避坑'},
-            {text: '编程之路', link: '/summary/变量命名规范'},
-            {text: '电脑小白', link: '/small-white/常用电脑快捷键（Windows系统）'},
+            {text: '网站收藏夹', link: '/stars/front-end-webs'},
+            {text: '资源分享', link: '/resources/library-for-coder'},
+            {text: '推荐与避坑', link: '/recommend/house-rent'},
+            {text: '编程之路', link: '/summary/var-naming'},
+            {text: '电脑小白', link: '/small-white/guide-for-pc-buy.md'},
             {text: '情感分享', link: '/emotion/'},
             {text: 'Github', link: 'https://github.com/CoderSJX'},
         ],
@@ -51,35 +69,48 @@ module.exports = {
     },
 
     // ...
-    plugins: ['fulltext-search', '@vuepress/back-to-top', '@vuepress/nprogress', '@vuepress/medium-zoom', ['@vuepress/pwa', {
-
-        serviceWorker: true,
-        generateSWConfig: {
-            globPatterns: [
-                '**\/*.{html,json,ico,css,js,png,jpg,jpeg,gif,svg,woff,woff2,eot,ttf,otf}',
-            ],
-
-        },
-        updatePopup: {
-                message: "发现内容更新，快刷新看看吧",
-                buttonText: "点此刷新"
-        }
-    }],
+    plugins:
         [
-            '@vuepress/last-updated',
-            {
-                transformer: (timestamp, lang) => {
-                    // 不要忘了安装 moment
-                    const moment = require('moment')
-                    moment.locale(lang)
-                    return moment(timestamp).fromNow()
+            'fulltext-search',
+            '@vuepress/back-to-top',
+            '@vuepress/nprogress',
+            '@vuepress/medium-zoom',
+            ['@vuepress/pwa', {
+
+                serviceWorker: true,
+                generateSWConfig: {
+                    globPatterns: [
+                        '**\/*.{html,json,ico,css,js,png,jpg,jpeg,gif,svg,woff,woff2,eot,ttf,otf}',
+                    ],
+
+                },
+                updatePopup: {
+                    message: "发现内容更新，快刷新看看吧",
+                    buttonText: "点此刷新"
                 }
-            }
-        ], [
-            '@vuepress/google-analytics',
-            {
-                'ga': '' // UA-00000000-0
-            }
-        ]],
+            }],
+            [
+                '@vuepress/last-updated',
+                {
+                    transformer: (timestamp, lang) => {
+                        // 不要忘了安装 moment
+                        const moment = require('moment')
+                        moment.locale(lang)
+                        return moment(timestamp).fromNow()
+                    }
+                }
+            ],
+            [
+                'vuepress-plugin-clean-urls',
+                {
+                    normalSuffix: '',
+                },
+            ],
+            [
+                '@vuepress/google-analytics',
+                {
+                    'ga': '' // UA-00000000-0
+                }
+            ]],
 
 }
