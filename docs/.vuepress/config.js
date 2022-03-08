@@ -27,7 +27,7 @@ module.exports = {
             '/stars/': ['前端那些Amazing的网站', '程序员学习网站精选', '学术研究类工具推荐', '程序员的工具箱',],
             '/small-white/': ['常用电脑快捷键（Windows系统）', '电脑选购指南'],
             '/recommend/': ['租房避坑',],
-            'resources':['程序员软件库','学习版APP'],
+            '/resources':['程序员软件库','学习版APP'],
             '/': [
                 '',
             ]
@@ -36,9 +36,9 @@ module.exports = {
 
         logo: '/favicon.ico',
         nav: [
-            {text: '主页', link: '/'},
-            {text: '收藏夹', link: '/stars/前端那些Amazing的网站'},
-            {text: '资源', link: '/resources/程序员软件库'},
+            {text: '首页', link: '/'},
+            {text: '网站收藏夹', link: '/stars/前端那些Amazing的网站'},
+            {text: '资源分享', link: '/resources/程序员软件库'},
             {text: '推荐与避坑', link: '/recommend/租房避坑'},
             {text: '编程之路', link: '/summary/变量命名规范'},
             {text: '电脑小白', link: '/small-white/常用电脑快捷键（Windows系统）'},
