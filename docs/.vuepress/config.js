@@ -22,29 +22,29 @@ module.exports = {
         sidebarDepth: 2,
         sidebar: {
             '/summary/': [
-                'var-naming/',
-                'leetcode-log/',
-                'maven-setting/',
-                'mysql-log/',
-                'ssm-quick-guide/',
+                'var-naming',
+                'leetcode-log',
+                'maven-setting',
+                'mysql-log',
+                'ssm-quick-guide',
             ],
             '/stars/': [
-                'front-end-webs/',
-                'web-for-coder-study/',
-                'research-util/',
-                'util-for-coder/',
-                'v2ray/',
+                'front-end-webs',
+                'web-for-coder-study',
+                'research-util',
+                'util-for-coder',
+                'v2ray',
             ],
             '/small-white/': [
-                'guide-for-pc-buy/',
-                'short-cut-for-windows/'
+                'guide-for-pc-buy',
+                'short-cut-for-windows'
             ],
             '/recommend/': [
-                'house-rent/',
+                'house-rent',
             ],
             '/resources/': [
-                'library-for-coder/',
-                'app-for-study/',
+                'library-for-coder',
+                'app-for-study',
             ],
             '/': [
                 '',
