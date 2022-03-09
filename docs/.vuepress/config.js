@@ -46,6 +46,7 @@ module.exports = {
             '/resources/': [
                 'library-for-coder',
                 'app-for-study',
+                'ebooks-for-coder'
             ],
             '/': [
                 '',
