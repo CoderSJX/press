@@ -36,8 +36,9 @@ module.exports = {
                 'v2ray',
             ],
             '/small-white/': [
+                'short-cut-for-windows',
+                'guide-for-ebooks',
                 'guide-for-pc-buy',
-                'short-cut-for-windows'
             ],
             '/recommend/': [
                 'house-rent',
@@ -59,7 +60,7 @@ module.exports = {
             {text: '资源分享', link: '/resources/library-for-coder/'},
             {text: '推荐与避坑', link: '/recommend/house-rent/'},
             {text: '编程之路', link: '/summary/var-naming/'},
-            {text: '电脑小白', link: '/small-white/guide-for-pc-buy/'},
+            {text: '电脑小白', link: '/small-white/short-cut-for-windows/'},
             {text: '情感分享', link: '/emotion/'},
             {text: 'Github', link: 'https://github.com/CoderSJX'},
         ],
