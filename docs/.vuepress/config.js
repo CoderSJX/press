@@ -22,6 +22,7 @@ module.exports = {
         sidebarDepth: 2,
         sidebar: {
             '/summary/': [
+                'spring-boot-annotation',
                 'var-naming',
                 'leetcode-log',
                 'maven-setting',
@@ -60,7 +61,7 @@ module.exports = {
             {text: '网站收藏夹', link: '/stars/front-end-webs/'},
             {text: '资源分享', link: '/resources/library-for-coder/'},
             {text: '推荐与避坑', link: '/recommend/house-rent/'},
-            {text: '编程之路', link: '/summary/var-naming/'},
+            {text: '编程之路', link: '/summary/spring-boot-annotation/'},
             {text: '电脑小白', link: '/small-white/short-cut-for-windows/'},
             {text: '情感分享', link: '/emotion/'},
             {text: 'Github', link: 'https://github.com/CoderSJX'},
