@@ -28,6 +28,7 @@ module.exports = {
                 'maven-setting',
                 'mysql-log',
                 'ssm-quick-guide',
+                'deep-in-js',
             ],
             '/stars/': [
                 'front-end-webs',
