@@ -29,6 +29,7 @@ module.exports = {
                 'mysql-log',
                 'ssm-quick-guide',
                 'deep-in-js',
+                'vue-src-analysis',
             ],
             '/stars/': [
                 'front-end-webs',
