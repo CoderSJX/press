@@ -318,3 +318,159 @@ new Vue({
 因为在 Vue.js 2.0 中，最终渲染都是通过 `render` 函数，如果写 `template` 属性，则需要编译成 `render` 函数，那么这个编译过程会发生运行时，所以需要带有编译器的版本。
 
 很显然，这个编译过程对性能会有一定损耗，所以通常我们更推荐使用 Runtime-Only 的 Vue.js。
+
+## Vue的入口
+
+分析 Runtime + Compiler 构建出来的 Vue.js，它的入口是 `src/platforms/web/entry-runtime-with-compiler.js`：
+
+```js
+import Vue from './runtime/index'
+```
+
+其中，Vue是从这里导入的。
+
+去找`'./runtime/index'`,它定义在 `src/platforms/web/runtime/index.js` 中：
+
+```js
+import Vue from 'core/index'
+```
+
+接着去找这个Vue，看一下真正初始化 Vue 的地方，在 `src/core/index.js` 中：
+
+```js
+import Vue from './instance/index'
+import { initGlobalAPI } from './global-api/index'
+import { isServerRendering } from 'core/util/env'
+import { FunctionalRenderContext } from 'core/vdom/create-functional-component'
+
+initGlobalAPI(Vue)
+
+Object.defineProperty(Vue.prototype, '$isServer', {
+  get: isServerRendering
+})
+
+Object.defineProperty(Vue.prototype, '$ssrContext', {
+  get () {
+    /* istanbul ignore next */
+    return this.$vnode && this.$vnode.ssrContext
+  }
+})
+
+// expose FunctionalRenderContext for ssr runtime helper installation
+Object.defineProperty(Vue, 'FunctionalRenderContext', {
+  value: FunctionalRenderContext
+})
+
+Vue.version = '__VERSION__'
+
+export default Vue
+```
+
+这里有 2 处关键的代码，`import Vue from './instance/index'` 和 `initGlobalAPI(Vue)`，初始化全局 Vue API（我们稍后介绍），我们先来看第一部分，在 `src/core/instance/index.js` 中：
+
+### Vue 的定义
+
+```js
+import { initMixin } from './init'
+import { stateMixin } from './state'
+import { renderMixin } from './render'
+import { eventsMixin } from './events'
+import { lifecycleMixin } from './lifecycle'
+import { warn } from '../util/index'
+
+function Vue (options) {
+  if (process.env.NODE_ENV !== 'production' &&
+    !(this instanceof Vue)
+  ) {
+    warn('Vue is a constructor and should be called with the `new` keyword')
+  }
+  this._init(options)
+}
+
+initMixin(Vue)
+stateMixin(Vue)
+eventsMixin(Vue)
+lifecycleMixin(Vue)
+renderMixin(Vue)
+
+export default Vue	
+```
+
+这就是Vue的庐山真面目，其实就是一个**用Function实现的类**，我们只能通过new Vue去实例化。
+
+> :confused: 有些同学看到这不禁想问，为何 Vue 不用 ES6 的 Class 去实现呢？我们往后看这里有很多 ```xxxMixin``` 的函数调用，并把 `Vue` 当参数传入，它们的功能都是给 Vue 的 prototype 上扩展一些方法（这里具体的细节会在之后的文章介绍，这里不展开），Vue 按功能把这些扩展分散到多个模块中去实现，而不是在一个模块里实现所有，这种方式是用 Class 难以实现的。这么做的好处是非常方便代码的维护和管理，这种编程技巧也非常值得我们去学习。
+
+
+
+### 初始化全局API
+
+Vue.js 在整个初始化过程中，除了给它的原型 prototype 上扩展方法，还会给 `Vue` 这个对象本身扩展全局的静态方法，它的定义在 `src/core/global-api/index.js` 中：
+
+```js
+export function initGlobalAPI (Vue: GlobalAPI) {
+  // config
+  const configDef = {}
+  configDef.get = () => config
+  if (process.env.NODE_ENV !== 'production') {
+    configDef.set = () => {
+      warn(
+        'Do not replace the Vue.config object, set individual fields instead.'
+      )
+    }
+  }
+  Object.defineProperty(Vue, 'config', configDef)
+
+  // exposed util methods.
+  // NOTE: these are not considered part of the public API - avoid relying on
+  // them unless you are aware of the risk.
+  Vue.util = {
+    warn,
+    extend,
+    mergeOptions,
+    defineReactive
+  }
+
+  Vue.set = set
+  Vue.delete = del
+  Vue.nextTick = nextTick
+
+  Vue.options = Object.create(null)
+  ASSET_TYPES.forEach(type => {
+    Vue.options[type + 's'] = Object.create(null)
+  })
+
+  // this is used to identify the "base" constructor to extend all plain-object
+  // components with in Weex's multi-instance scenarios.
+  Vue.options._base = Vue
+
+  extend(Vue.options.components, builtInComponents)
+
+  initUse(Vue)
+  initMixin(Vue)
+  initExtend(Vue)
+  initAssetRegisters(Vue)
+}
+```
+
+> :smile: [Vue官方指南中的那些全局API](https://cn.vuejs.org/v2/api/#全局-API)，这里面的东西之前一直不会用，现在可以看源代码了。
+
+1. [Vue.extend](https://cn.vuejs.org/v2/api/#Vue-extend)
+2. [Vue.nextTick](https://cn.vuejs.org/v2/api/#Vue-nextTick)
+3. [Vue.set](https://cn.vuejs.org/v2/api/#Vue-set)
+4. [Vue.delete](https://cn.vuejs.org/v2/api/#Vue-delete)
+5. [Vue.directive](https://cn.vuejs.org/v2/api/#Vue-directive)
+6. [Vue.filter](https://cn.vuejs.org/v2/api/#Vue-filter)
+7. [Vue.component](https://cn.vuejs.org/v2/api/#Vue-component)
+8. [Vue.use](https://cn.vuejs.org/v2/api/#Vue-use)
+9. [Vue.mixin](https://cn.vuejs.org/v2/api/#Vue-mixin)
+10. [Vue.compile](https://cn.vuejs.org/v2/api/#Vue-compile)
+11. [Vue.observable](https://cn.vuejs.org/v2/api/#Vue-observable)
+12. [Vue.version](https://cn.vuejs.org/v2/api/#Vue-version)
+
+> :warning: 有一点要注意的是，`Vue.util` 暴露的方法最好不要依赖，因为它可能经常会发生变化，是不稳定的。
+
+
+
+## 数据驱动
+
+Vue.js 一个核心思想是数据驱动。所谓数据驱动，是指视图是由数据驱动生成的，我们对视图的修改，不会直接操作 DOM，而是通过修改数据，即**数据驱动视图**。
