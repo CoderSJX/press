@@ -10,4 +10,4 @@
 
 推荐下面这几集。
 
-![psychology](..\.vuepress\public\images\psychology.png)
+![psychology](../.vuepress/public/images/psychology.png)
