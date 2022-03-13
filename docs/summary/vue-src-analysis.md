@@ -474,3 +474,123 @@ export function initGlobalAPI (Vue: GlobalAPI) {
 ## 数据驱动
 
 Vue.js 一个核心思想是数据驱动。所谓数据驱动，是指视图是由数据驱动生成的，我们对视图的修改，不会直接操作 DOM，而是通过修改数据，即**数据驱动视图**。
+
+在 Vue.js 中我们可以采用简洁的模板语法来声明式的将数据渲染为 DOM：
+
+```html
+<div id="app">
+  {{ message }}
+</div>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+
+### 看看new Vue的时候发生了什么
+
+来看一下源码，在`src/core/instance/index.js` 中。
+
+```js
+function Vue (options) {
+  if (process.env.NODE_ENV !== 'production' &&
+    !(this instanceof Vue)
+  ) {
+    warn('Vue is a constructor and should be called with the `new` keyword')
+  }
+  this._init(options)
+}
+```
+
+可以看到 `Vue` 只能通过 new 关键字初始化，然后会调用 `this._init` 方法， 该方法在 `src/core/instance/init.js` 中定义。
+
+> :bulb: $options中的$符号并不是什么语法和关键字，而是为了让用户区分vue中的变量和用户自定义的变量而已，只是加了个前缀字符，加$为了表示特殊含义。
+
+> :star2: **\`vue-perf-start:${vm._uid}\`**是插值表达式，配合${XXX}，取到XXX变量的值，注意两侧有\`\`号。
+
+> :tada:
+>
+> #### ES6中
+>
+> es6中也可以采用${XXX}来在字符串中插入变量（这个记住要利用v-bind）
+>
+> ##### jquery中
+>
+> 利用$作为选择器，其实是jquery库对原生JavaScript对选择元素进行的一种封装！
+>
+> #### devtool中
+>
+> $是在`console`中是冗长的函数`document.querySelector`的一个别名
+
+```js
+Vue.prototype._init = function (options?: Object) {
+  const vm: Component = this
+  // a uid
+  vm._uid = uid++
+
+  let startTag, endTag
+  /* istanbul ignore if */
+  if (process.env.NODE_ENV !== 'production' && config.performance && mark) {
+    startTag = `vue-perf-start:${vm._uid}`
+    endTag = `vue-perf-end:${vm._uid}`
+    mark(startTag)
+  }
+
+  // a flag to avoid this being observed
+  vm._isVue = true
+  // merge options
+  if (options && options._isComponent) {
+    // optimize internal component instantiation
+    // since dynamic options merging is pretty slow, and none of the
+    // internal component options needs special treatment.
+    initInternalComponent(vm, options)
+  } else {
+    vm.$options = mergeOptions(
+      resolveConstructorOptions(vm.constructor),
+      options || {},
+      vm
+    )
+  }
+  /* istanbul ignore else */
+  if (process.env.NODE_ENV !== 'production') {
+    initProxy(vm)
+  } else {
+    vm._renderProxy = vm
+  }
+  // expose real self
+  vm._self = vm
+  initLifecycle(vm)
+  initEvents(vm)
+  initRender(vm)
+  callHook(vm, 'beforeCreate')
+  initInjections(vm) // resolve injections before data/props
+  initState(vm)
+  initProvide(vm) // resolve provide after data/props
+  callHook(vm, 'created')
+
+  /* istanbul ignore if */
+  if (process.env.NODE_ENV !== 'production' && config.performance && mark) {
+    vm._name = formatComponentName(vm, false)
+    mark(endTag)
+    measure(`vue ${vm._name} init`, startTag, endTag)
+  }
+
+  if (vm.$options.el) {
+    vm.$mount(vm.$options.el)
+  }
+}
+```
+
+Vue 初始化主要就干了几件事情，合并配置，初始化生命周期，初始化事件中心，初始化渲染，初始化 data、props、computed、watcher 等等。
+
+由于我们这一章的目标是弄清楚模板和数据如何渲染成最终的 DOM，所以各种初始化逻辑我们先不看。在初始化的最后，检测到如果有 `el` 属性，则调用 `vm.$mount` 方法挂载 `vm`，挂载的目标就是把模板渲染成最终的 DOM，那么接下来我们来分析 Vue 的挂载过程。
+
+## Vue实例挂载
+
+Vue 中我们是通过 `$mount` 实例方法去挂载 `vm` 的，`$mount` 方法在多个文件中都有定义。
+
+![vue-mount](../.vuepress/public/images/vue-mount.png)
+
+先来看一下 `src/platform/web/entry-runtime-with-compiler.js` 文件中定义：

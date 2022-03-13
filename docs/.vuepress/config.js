@@ -51,6 +51,9 @@ module.exports = {
                 'app-for-study',
                 'ebooks-for-coder'
             ],
+            '/emotion/': [
+                'psychology',
+            ],
             '/': [
                 '',
             ]
@@ -65,7 +68,7 @@ module.exports = {
             {text: '推荐与避坑', link: '/recommend/house-rent/'},
             {text: '编程之路', link: '/summary/spring-boot-annotation/'},
             {text: '电脑小白', link: '/small-white/short-cut-for-windows/'},
-            {text: '情感分享', link: '/emotion/'},
+            {text: '情感分享', link: '/emotion/psychology'},
             {text: 'Github', link: 'https://github.com/CoderSJX'},
         ],
         lastUpdated: '上次更新',
