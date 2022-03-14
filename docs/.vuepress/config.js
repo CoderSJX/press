@@ -32,9 +32,9 @@ module.exports = {
                 'vue-src-analysis',
             ],
             '/stars/': [
+                'research-util',
                 'front-end-webs',
                 'web-for-coder-study',
-                'research-util',
                 'util-for-coder',
                 'v2ray',
             ],
@@ -63,7 +63,7 @@ module.exports = {
         logo: '/favicon.ico',
         nav: [
             {text: '首页', link: '/'},
-            {text: '网站收藏夹', link: '/stars/front-end-webs/'},
+            {text: '网站收藏夹', link: '/stars/research-util/'},
             {text: '资源分享', link: '/resources/library-for-coder/'},
             {text: '推荐与避坑', link: '/recommend/house-rent/'},
             {text: '编程之路', link: '/summary/spring-boot-annotation/'},

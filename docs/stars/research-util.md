@@ -1,4 +1,74 @@
-# :man_student: 学术研究类工具推荐
+# :man_student: 学生必备网站合集
+
+## PPT超级市场
+
+**推荐指数：:star:**:star::star::star::star:
+
+完全免费的PPT模版，好看好用。牛牛牛！
+
+[PPT超级市场](https://www.pptsupermarket.com/)
+
+![Aconvert](../.vuepress/public/images/super-ppt.png)
+
+
+
+## aconvert
+
+**推荐指数：:star:**:star::star::star::star:
+
+各种文件格式在线转换，完全免费。
+
+Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档](https://www.aconvert.com/cn/document/)，[电子书](https://www.aconvert.com/cn/ebook/)，[图像](https://www.aconvert.com/cn/image/)，[图标](https://www.aconvert.com/cn/icon/)，[视频](https://www.aconvert.com/cn/video/)，[音频](https://www.aconvert.com/cn/audio/)和[压缩](https://www.aconvert.com/cn/archive/)文件。
+
+页面有中文版的，右上角导数第二个选项切换语言。
+
+[aconvert](https://www.aconvert.com/cn/)
+
+![Aconvert](../.vuepress/public/images/aconvert.png)
+
+
+
+## AlternativeTo
+
+**推荐指数：:star:**:star::star::star::star:
+
+看这个名字应该就应该知道了，这个网站是专门为你推荐替代品的。
+
+比方说某个软件很好用，但是收费，你可以在这个网站上搜索这个软件的替代品，只需要输入这个软件的名字即可。
+
+牛的一批。
+
+[AlternativeTo](https://alternativeto.net/)
+
+![alternativeto](../.vuepress/public/images/alternativeto.png)
+
+
+
+## pixabay
+
+**推荐指数：:star:**:star::star::star::star:
+
+想找图片？百度上的乱七八糟，还带水印？
+
+这个网站提供免费的高质量图片。
+
+使用时注意版权问题哈，网页右侧会显示是否可用于商用，是否需要注明作者。
+
+[pixabay](https://pixabay.com/)
+
+![pixabay](../.vuepress/public/images/pixabay.png)
+
+
+
+## freepik
+
+**推荐指数：:star:**:star::star::star::star:
+
+同样高质量的图片网站，更多格式。
+
+[freepik](https://www.freepik.com/)![pixabay](../.vuepress/public/images/freepik.png)
+
+
 
 ## Process On
 
@@ -33,8 +103,6 @@
 [Zlibrary官网](https://zh.usa1lib.org/)
 
 ![zlibrary](../.vuepress/public/images/zlibrary.png)
-
-
 
 
 
