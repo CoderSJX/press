@@ -14,6 +14,8 @@
 
 **推荐指数：:star:**:star::star::star:
 
+在线生成CSS渐变色。
+
 [WebGradients](https://webgradients.com/)
 
 ![web-gradients.png](../.vuepress/public/images/web-gradients.png)
