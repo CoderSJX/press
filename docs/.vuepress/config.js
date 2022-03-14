@@ -33,6 +33,7 @@ module.exports = {
             ],
             '/stars/': [
                 'research-util',
+                'scientific-research',
                 'front-end-webs',
                 'web-for-coder-study',
                 'util-for-coder',
