@@ -37,7 +37,6 @@ module.exports = {
                 'front-end-webs',
                 'web-for-coder-study',
                 'util-for-coder',
-                'v2ray',
             ],
             '/small-white/': [
                 'short-cut-for-windows',
