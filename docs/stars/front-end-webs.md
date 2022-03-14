@@ -48,6 +48,8 @@
 
 **推荐指数：:star:**:star::star::star::star:
 
+[typeanything](https://app.typeanything.io/)
+
 在线进行字体的选用、属性组合、设计、预览、CSS代码生成。
 
 ![typeanything](../.vuepress/public/images/type-anything.png)
