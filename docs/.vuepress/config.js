@@ -49,7 +49,8 @@ module.exports = {
             '/resources/': [
                 'library-for-coder',
                 'app-for-study',
-                'ebooks-for-coder'
+                'ebooks-for-coder',
+                'tuling-books'
             ],
             '/emotion/': [
                 'psychology',
@@ -97,17 +98,6 @@ module.exports = {
                     buttonText: "点此刷新"
                 }
             }],
-            [
-                '@vuepress/last-updated',
-                {
-                    transformer: (timestamp, lang) => {
-                        // 不要忘了安装 moment
-                        const moment = require('moment')
-                        moment.locale(lang)
-                        return moment(timestamp).fromNow()
-                    }
-                }
-            ],
             [
                 'vuepress-plugin-clean-urls',
                 {
