@@ -30,7 +30,7 @@ console.log(a)
 let a=10;//Uncaught ReferenceError: Cannot access 'a' before initialization
 ```
 
-var类型变量有个特性：**声明提升**。即不管var变量在哪里定义，都会在代码最开始的地方声明它。所以在它被初始化之前，可以打印它，但是只能得到undefined。
+var类型变量有个特性：**声明提升**。即不管var变量在哪里定义，都会在**当前代码块最开始的地方**声明它。所以在它被初始化之前，可以打印它，但是只能得到undefined。
 
 但是let没有这个特性，所以它是一个错误。
 
@@ -47,12 +47,12 @@ console.log(i)//Uncaught ReferenceError: i is not defined
 for (var i = 0; i < 5; i++) {
     
 }
-console.log(i)//5s
+console.log(i)//5
 ```
 
 let变量的作用域很明确，就是定义他的地方。在for循环之外就访问不到了。
 
-而var变量又有一个特性，叫**变量提升**。即var定义的变量自动会绑定到全局对象window上，因此该变量会变成一个全局变量。
+而var变量又有一个特性，var定义的全局变量自动会绑定到全局对象window上。
 
 ![window](../.vuepress/public/images/window.png)
 
