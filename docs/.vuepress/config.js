@@ -30,6 +30,7 @@ module.exports = {
                 'ssm-quick-guide',
                 'deep-in-js',
                 'vue-src-analysis',
+                'js-tricks',
             ],
             '/stars/': [
                 'research-util',
