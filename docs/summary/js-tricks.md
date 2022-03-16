@@ -112,3 +112,21 @@ for (let i = 0; i < 5; i++) {
 
 
 
+## IIFE（立即调用函数表达式）
+
+平时我们定义和执行函数分为两部分。
+
+```js
+function test(){
+    console.log(2)
+}
+test();
+```
+
+使用IIFE（函数外面套个括号，然后再在后面加个括号）：会在定义的时候就执行函数
+
+```
+(function test(){
+    console.log(2)
+})()
+```
