@@ -46,7 +46,7 @@ createComparsionFunction函数中返回的匿名函数就是一个闭包，因�
 
 
 
-## Promise
+## Promise（期约）
 
 ```js
 let syncResolve;
@@ -167,6 +167,40 @@ finally(() => {
     console.log("finally")
 })
 ```
+
+
+
+### Promise.all()和Promise.race()
+
+1. Promise.all()会返回一个新的Promise，这个Promise只有在其包含的所有期约都被解决之后才能解决。
+2. 可迭代的对象中的元素会自动调用Promise.resolve()转化成一个Promise
+3. 只有在p.then的回调函数中打印p才会打印出fulfilled，而在then之后打印只会打印pending。
+
+```
+let p = Promise.all([Promise.resolve(),2,3])
+p.then(() => {
+    console.log(p);
+})
+```
+
+```javascript
+Promise {<fulfilled>: Array(3)}
+[[Prototype]]: Promise
+[[PromiseState]]: "fulfilled"
+[[PromiseResult]]: Array(3)
+```
+
+如果Promise.all()中有Promise被reject，那么按照书写顺序的第一个Promise的reject理由才会成为p的reject理由。之后所有reject的Promise的理由都无效，但是每个reject的情况都会被正常处理，静默处理。、
+
+
+
+Promise.race()有所不同，它返回一个Promise，这个Promise是一个镜像Promise，镜像的对象是它包含的Promise中的一个。
+
+通过race这个方法名称可以看出，包含的Promise中谁最快，就返回谁的镜像。
+
+这个快，是指：第一个落定的期约（不论是reject的，还是resolve的），只要是第一个落定状态的。
+
+
 
 
 
