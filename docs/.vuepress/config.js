@@ -38,6 +38,7 @@ module.exports = {
                 'front-end-webs',
                 'web-for-coder-study',
                 'util-for-coder',
+                'deep-in-coding',
             ],
             '/small-white/': [
                 'short-cut-for-windows',

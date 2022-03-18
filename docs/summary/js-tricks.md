@@ -125,8 +125,54 @@ test();
 
 使用IIFE（函数外面套个括号，然后再在后面加个括号）：会在定义的时候就执行函数
 
-```
+```js
 (function test(){
     console.log(2)
 })()
+```
+
+
+
+## 不要换行！
+
+```js
+function addTwo(x) {
+    return x + 2;
+}
+
+function addThree(x) {
+    return x + 3;
+}
+
+function addFive(x) {
+    return x + 5;
+}
+
+function addTen(x) {
+    return
+    Promise.
+    resolve(x).
+    then(addTwo).
+    then(addThree).
+    then(addFive);
+}
+addTen(10).then(console.log);
+```
+
+IDE提示：Unreachable code
+
+有问题吗？有问题。
+
+js是对回车敏感的语言，**并不是靠分号来区分语句的**。所以这里本意是想让代码更美观，把return后面的内容换到了下一行，但是return独占一行就会直接返回了。
+
+应该这么写：
+
+```js
+function addTen(x) {
+    return Promise.
+    resolve(x). 
+    then(addTwo).
+    then(addThree).
+    then(addFive);
+}
 ```
