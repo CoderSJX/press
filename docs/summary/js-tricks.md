@@ -176,3 +176,48 @@ function addTen(x) {
     then(addFive);
 }
 ```
+
+
+
+## 通用的合成期约函数
+
+对于下面的代码，我只能说：js神奇！
+
+reduce函数是一个循环处理的过程，循环一个数组，接收一个reducer回调函数，如果回调函数只有两个参数，那么第一个参数表示previousValue，第二个参数表示currentValue，回调函数中的返回值就是下一次操作的previousValue。
+
+这里的previousValue就是promise，即promise.then(fn), Promise.resolve(x)执行后的返回值。
+
+fn就表示数组中当前循环到的值。
+
+```js
+function addTwo(x) {
+    return x + 2;
+}
+
+function addThree(x) {
+    return x + 3;
+}
+
+function addFive(x) {
+    return x + 5;
+}
+
+// function addTen(x) {
+//     return Promise.resolve(x).then(addTwo).then(addThree).then(addFive);
+// }
+
+// addTen(10).then(console.log);
+
+// function addTen2(x) {
+//     return [addTwo, addThree, addFive]
+//         .reduce((promise, fn) => promise.then(fn), Promise.resolve(x))
+// }
+
+function compose(...fns) {
+    return (x) => fns.reduce((promise, fn) => promise.then(fn), Promise.resolve(x))
+}
+
+let addTen = compose(addTwo, addThree, addFive)
+addTen(11).then(console.log)
+```
+

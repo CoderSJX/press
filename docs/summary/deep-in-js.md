@@ -202,6 +202,40 @@ Promise.race()有所不同，它返回一个Promise，这个Promise是一个镜�
 
 
 
+### 通用的合成期约函数
+
+```js
+function addTwo(x) {
+    return x + 2;
+}
+
+function addThree(x) {
+    return x + 3;
+}
+
+function addFive(x) {
+    return x + 5;
+}
+
+// function addTen(x) {
+//     return Promise.resolve(x).then(addTwo).then(addThree).then(addFive);
+// }
+
+// addTen(10).then(console.log);
+
+// function addTen2(x) {
+//     return [addTwo, addThree, addFive]
+//         .reduce((promise, fn) => promise.then(fn), Promise.resolve(x))
+// }
+
+function compose(...fns) {
+    return (x) => fns.reduce((promise, fn) => promise.then(fn), Promise.resolve(x))
+}
+
+let addTen = compose(addTwo, addThree, addFive)
+addTen(11).then(console.log)
+```
+
 
 
 ## 发布订阅模式

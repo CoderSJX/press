@@ -31,6 +31,7 @@ module.exports = {
                 'deep-in-js',
                 'vue-src-analysis',
                 'js-tricks',
+                'pit',
             ],
             '/stars/': [
                 'research-util',
