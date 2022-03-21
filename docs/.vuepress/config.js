@@ -32,6 +32,7 @@ module.exports = {
                 'vue-src-analysis',
                 'js-tricks',
                 'pit',
+                'ide-kick-ass',
             ],
             '/stars/': [
                 'research-util',

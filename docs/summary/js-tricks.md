@@ -177,6 +177,40 @@ function addTen(x) {
 }
 ```
 
+## Array.prototype.reduce() 挺好玩
+
+```js
+let res = [1, 2, 3, 4].reduce((pre, cur) => pre+cur, 10);
+console.log(res)//20
+//即10+1,11+2，13+3,16+4
+```
+
+此函数对数组里的元素进行循环。
+
+reduce中接收两个参数，第一个参数是个函数（reducer函数），第二个参数是initialValue（可选的）。
+
+如果不提供initialValue，那么循环将从第二个元素开始。
+
+```js
+let res = [1, 2, 3, 4].reduce((pre, cur) => pre+cur);
+console.log(res)//10
+//即1+2+3+4
+```
+
+如果提供了初始值，就相当于在数组前面添加了初始值。
+
+reducer函数，接收四个参数：
+
+pre:上一个reducer函数的返回值;（对于上面的例子，就是return pre+cur）
+
+cur: 当前遍历到的元素。
+
+curIndex:当前遍历到的元素的下标
+
+arr：被遍历的对象
+
+具体的解释在官方文档里有：[Array.prototype.reduce()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
 
 
 ## 通用的合成期约函数
@@ -185,7 +219,9 @@ function addTen(x) {
 
 reduce函数是一个循环处理的过程，循环一个数组，接收一个reducer回调函数，如果回调函数只有两个参数，那么第一个参数表示previousValue，第二个参数表示currentValue，回调函数中的返回值就是下一次操作的previousValue。
 
-这里的previousValue就是promise，即promise.then(fn), Promise.resolve(x)执行后的返回值。
+这里的previousValue就是promise，即promise.then(fn)执行后的返回值。
+
+回调函数后面的promise.resolve(x)是initialValue（初始值），被当做循环的第一项，如果没有指定初始值，则会取数组的第一项当做initialValue，也就是说循环从第二个元素开始。
 
 fn就表示数组中当前循环到的值。
 
@@ -220,4 +256,34 @@ function compose(...fns) {
 let addTen = compose(addTwo, addThree, addFive)
 addTen(11).then(console.log)
 ```
+
+
+
+## == 和 === 是不一样的
+
+==比较的是值。类似于Java中的equals。
+
+===不仅比较值，还得比较类型，类型不一致也不行。
+
+通常IDE会推荐使用===，使用==会爆出警告。
+
+Number（x）这种和直接声明一样。
+
+```js
+let a=3;
+let b=new Number(3);
+let c=3;
+let d=Number(3);
+
+console.log(a==b);//true
+console.log(a===b);//false
+console.log(a==c);//true
+console.log(a===c);//true
+console.log(a==d)//true
+console.log(a===d)//true
+console.log(b==d)//true
+console.log(b===d)//false
+```
+
+
 
