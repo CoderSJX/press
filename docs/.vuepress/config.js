@@ -24,8 +24,8 @@ module.exports = {
             platform: 'github',
             owner: 'CoderSJX',
             repo: 'press-comments',
-            clientId: 'Iv1.dc60c562644e6c7d',
-            clientSecret: '6fd51eeb9622314af270a5bec815a8335df40d09',
+            clientId: 'Iv1.38de222f0b394789',
+            clientSecret: 'c8e829913311ec3413b6d6d28d5c83bb76eb6f75',
             autoCreateIssue:true
         },
         blogConfig: {
