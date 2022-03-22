@@ -20,6 +20,14 @@ module.exports = {
         }
     },
     themeConfig: {
+        vssueConfig: {
+            platform: 'github',
+            owner: 'CoderSJX',
+            repo: 'press-comments',
+            clientId: 'Iv1.dc60c562644e6c7d',
+            clientSecret: '6fd51eeb9622314af270a5bec815a8335df40d09',
+            autoCreateIssue:true
+        },
         blogConfig: {
             category: {
                 location: 2,     // 在导航栏菜单中所占的位置，默认2
