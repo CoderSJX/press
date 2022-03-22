@@ -1,4 +1,12 @@
-# 🍃 JavaScript Tricks
+---
+title: 🍃 JavaScript Tricks
+date: 2022-03-17
+categories:
+ - 编程之路
+tags:
+ - JavaScript
+ - 编程技巧
+---
 
 ## && 与 ||
 
@@ -285,5 +293,29 @@ console.log(b==d)//true
 console.log(b===d)//false
 ```
 
+## Function*
 
+```js
+const teams = [
+    {name: 'team1', members: ['123', '333']},
+    {name: 'team2', members: ['23', '34']},
+]
 
+function* getMembers(members) {
+    for (let i = 0; i < members.length; i++) {
+        yield members[i];
+    }
+}
+
+function* getTeam(teams) {
+    for (let i = 0; i < teams.length; i++) {
+        yield* getMembers(teams[i].members);
+    }
+}
+
+let obj = getTeam(teams);
+console.log(obj.next());
+console.log(obj.next())
+console.log(obj.next())
+console.log(obj.next())
+```

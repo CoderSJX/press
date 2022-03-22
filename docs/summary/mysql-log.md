@@ -1,6 +1,13 @@
-# 🎽 说说MYSQL的那些日志
-
-
+---
+title: 🎽 说说MYSQL的那些日志
+date: 2022-02-24
+categories:
+ - 编程之路
+tags:
+ - 数据库
+ - MySQL
+ - 深入理解
+---
 
 ## 重做日志（redo log）
 

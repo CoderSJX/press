@@ -1,4 +1,13 @@
-# ✨ LeetCode
+---
+title: ✨ LeetCode刷题记录
+date: 2022-02-22
+categories:
+ - 编程之路
+tags:
+ - LeetCode
+ - 算法
+ - 题目
+---
 
 ## **[3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)**
 

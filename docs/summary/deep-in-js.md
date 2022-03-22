@@ -1,5 +1,12 @@
-# 🍤 深入理解JavaScript
-
+---
+title: 🍤 深入理解JavaScript
+date: 2022-03-11
+categories:
+ - 编程之路
+tags:
+ - JavaScript
+ - 深入理解
+---
 ## 闭包
 
 ### 定义

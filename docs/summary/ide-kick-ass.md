@@ -1,5 +1,12 @@
-## 🍒IDE Kick Ass
-
+---
+title: 🍒IDE Kick Ass
+date: 2022-03-21
+categories:
+ - 编程之路
+tags:
+ - IDE
+ - 工具使用技巧
+---
 ## WebStorm
 
 ### 代码模版生成
