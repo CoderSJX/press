@@ -1,5 +1,5 @@
 ---
-title: 🍒IDE Kick Ass
+title: 🍒 IDE Kick Ass
 date: 2022-03-21
 categories:
  - 编程之路
