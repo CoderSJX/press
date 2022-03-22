@@ -21,7 +21,6 @@ module.exports = {
     },
     themeConfig: {
         vssueConfig: {
-            api:'@vssue/api-github-v3',
             platform: 'github',
             owner: 'CoderSJX',
             repo: 'press-comments',
