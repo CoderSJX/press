@@ -24,8 +24,8 @@ module.exports = {
             platform: 'github',
             owner: 'CoderSJX',
             repo: 'press-comments',
-            clientId: 'Iv1.38de222f0b394789',
-            clientSecret: 'c8e829913311ec3413b6d6d28d5c83bb76eb6f75',
+            clientId: '0955b5f0a0f314859589',
+            clientSecret: '7e8994d13fc4b00e2c4241f02b916f90e85efd6f',
             issueContent: ({ url }) =>
                 `这个 Issue 由 Vssue 自动创建，用来存储该页面的评论：${url}`
         },
