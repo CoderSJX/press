@@ -1,4 +1,6 @@
-# Introduction
+---
+title: 🌄 网站简介
+---
 
 ## :rocket:板块划分
 
@@ -29,18 +31,6 @@
 只要访问过一次，以后就可以离线访问了，也就是没有网络也可以访问，你可以把网络关了，再访问试试。
 
 网站内容如果更新了，就会在右下角提示你更新，点击更新。
-
-## 🍎手机如何使用本网站？
-
-![course1](./.vuepress/public/images/course1.png)
-
-![course1](./.vuepress/public/images/course2.png)
-
-![course1](./.vuepress/public/images/course3.png)
-
-![course1](./.vuepress/public/images/course4.png)
-
-![course1](./.vuepress/public/images/course5.png)
 
 ## :smiley_cat: 自我介绍
 
