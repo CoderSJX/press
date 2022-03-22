@@ -11,7 +11,8 @@ module.exports = {
         ['link', {rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.jpg'}],
         ['link', {rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#409EFF'}],
         ['meta', {name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.jpg'}],
-        ['meta', {name: 'msapplication-TileColor', content: '#ffffff'}]
+        ['meta', {name: 'msapplication-TileColor', content: '#ffffff'}],
+        ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
     ],
     locales: {
         '/': {
@@ -80,9 +81,9 @@ module.exports = {
         searchMaxSuggestions: 10,
         logo: '/favicon.ico',
         nav: [
-            {text: '首页', link: '/'},
-            {text: '时间轴', link: '/timeline/',},
-            {text: 'Github', link: 'https://github.com/CoderSJX'},
+            {text: '首页', link: '/',icon: 'reco-home'},
+            {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
+            {text: 'Github', link: 'https://github.com/CoderSJX', icon: 'reco-github'},
         ],
         lastUpdated: '上次更新',
         smoothScroll: true
