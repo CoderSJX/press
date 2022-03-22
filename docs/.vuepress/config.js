@@ -26,6 +26,8 @@ module.exports = {
             repo: 'press-comments',
             clientId: 'Iv1.38de222f0b394789',
             clientSecret: 'c8e829913311ec3413b6d6d28d5c83bb76eb6f75',
+            issueContent: ({ url }) =>
+                `这个 Issue 由 Vssue 自动创建，用来存储该页面的评论：${url}`
         },
         blogConfig: {
             category: {
