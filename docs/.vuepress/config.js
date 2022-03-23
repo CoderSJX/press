@@ -56,6 +56,7 @@ module.exports = {
                 'js-tricks',
                 'pit',
                 'ide-kick-ass',
+                'deep-in-vue-reactive',
             ],
             '/stars/': [
                 'research-util',
