@@ -245,6 +245,51 @@ addTen(11).then(console.log)
 
 
 
+## 手写一个数据绑定
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input id="input" type="text"/>
+<div id="text"></div>
+</body>
+<script>
+    let input = document.getElementById("input");
+    let text = document.getElementById("text");
+    let data = {value: ""};
+    Object.defineProperty(data, "value", {
+        set: function (val) {
+            text.innerHTML = val;
+            input.value = val;
+        },
+        get: function () {
+            return input.value;
+        }
+    });
+    input.onkeyup = function (e) {
+        data.value = e.target.value;
+    };
+</script>
+</html>
+```
+
+
+
+
+
+
+
+
+
+
+
 ## 发布订阅模式
 
 ```html

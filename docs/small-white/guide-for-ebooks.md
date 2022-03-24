@@ -41,7 +41,7 @@ tags:
 
 缺点：这个电子书网站的网址经常变动，因为访问的人太多了，如果网址不好使了，记得公众号联系我补链接。
 
-[Zlibrary官网](https://zh.usa1lib.org/)
+[Zlibrary官网](https://zh.book4you.org/)
 
 ![zlibrary](../.vuepress/public/images/zlibrary.png)
 
