@@ -217,5 +217,29 @@ exclude意为排除。
 
 
 
+## 🚚 @Transactional
+
+### 应用场景
+
+当一个方法需要进行事务控制的时候使用，该方法如果抛出RuntimeException（**特别注意是RuntimeException**），就会使这个方法内的所有的数据库操作回滚，也就是说一个@Transactional注解就是一个事务。
+
+### 使用方式
+
+标注在要启用事务控制的方法上。通常只需要标注上这个注解，就完全够用了，不需要其他配置，很简单。
+
+### 注意事项
+
+1. @Transactional必须放**在public方法上**，本质是Spring对该方法进行增强代理。也可以为非public方法设置该注解，需要配置，但推荐在public方法上使用。
+
+2. 该注解默认检测到RuntimeException才会认为该事务失败需要回滚，如果不配置的话，你抛出了`非RuntimeException`（普通的Exception，例如：throw new Exception("code error")），**这个注解是不会生效的**，事务是不会回滚的。可以指定它的rollback属性来控制能让他生效的异常类，如下面代码所示，此时只要是Exception及其子类都可以使注解生效，使事务生效。
+
+   ```java
+   @Transactional(rollbackFor = Exception.class)
+   ```
+
+3. 如果需要在@Transactional标注的方法中try-catch，**一定要记得catch之后，再手动抛出一个异常（Runtime Exception）**，不然该异常被你捕获了，@Transactional并不知道这个方法里抛出了异常，也就不会进行事务回滚。**如果你只是想忽略某些异常**，比方说一些不重要的异常，你可以通过刚说的try-catch的方式，避免该异常被@Transactional察觉到。
+
+4. 标注了@Transactional注解的方法中，调用了其他方法，那么其他方法中抛出的异常，也会被@Transactional察觉到，这一点不用担心。
+
 
 
