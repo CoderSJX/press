@@ -58,6 +58,8 @@ module.exports = {
                 'ide-kick-ass',
                 'deep-in-vue-reactive',
                 'vue-template',
+                'js-proxy',
+                'vue-interview',
             ],
             '/stars/': [
                 'research-util',
