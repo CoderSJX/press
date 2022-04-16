@@ -108,9 +108,9 @@ module.exports = {
     plugins:
         [
             'fulltext-search',
+            '@vuepress/medium-zoom',
             '@vuepress/back-to-top',
             '@vuepress/nprogress',
-            '@vuepress/medium-zoom',
             ['@vuepress/pwa', {
 
                 serviceWorker: true,
