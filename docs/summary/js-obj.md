@@ -8,6 +8,8 @@ tags:
  - 深入理解
 ---
 
+![js-obj-mind](../.vuepress/public/images/js-obj-mind.png)
+
 ## 定义
 
 对象：一组属性的无序集合（可以当成散列表，值可以是数据或函数）

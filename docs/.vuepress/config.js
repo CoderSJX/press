@@ -60,6 +60,7 @@ module.exports = {
                 'vue-template',
                 'js-proxy',
                 'vue-interview',
+                'js-obj',
             ],
             '/stars/': [
                 'research-util',
