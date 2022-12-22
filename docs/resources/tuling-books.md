@@ -19,5 +19,5 @@ tags:
 
 部分截图：
 
-![tuling-books](../.vuepress/public/images/tuling-books.png)
+![tuling-books](https://www.nullpointer.site/images/tuling-books.png)
 

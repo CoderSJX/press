@@ -18,4 +18,4 @@ tags:
 
 推荐下面这几集。
 
-![psychology](../.vuepress/public/images/psychology.png)
+![psychology](https://www.nullpointer.site/images/psychology.png)

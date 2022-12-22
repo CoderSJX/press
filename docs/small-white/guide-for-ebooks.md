@@ -19,7 +19,7 @@ tags:
 
 [鸠摩搜书网站](https://www.jiumodiary.com/)
 
-![zlibrary](../.vuepress/public/images/jiumo.png)
+![zlibrary](https://www.nullpointer.site/images/jiumo.png)
 
 
 
@@ -43,5 +43,5 @@ tags:
 
 [Zlibrary官网](https://zh.book4you.org/)
 
-![zlibrary](../.vuepress/public/images/zlibrary.png)
+![zlibrary](https://www.nullpointer.site/images/zlibrary.png)
 

@@ -28,7 +28,7 @@ tags:
 >
 
 
-![ssm](../.vuepress/public/images/ssm.png)
+![ssm](https://www.nullpointer.site/images/ssm.png)
 
 ## `SpringMVC`的作用
 
@@ -54,7 +54,7 @@ tags:
 😜 房屋架子就是框架替你写好的代码，你的混凝土、装修就是你自己写的代码。用了框架，工作量就少了很多，而且人家搭的架子肯定比你自己搭的好。
 
 
-![building](../.vuepress/public/images/building.png)
+![building](https://www.nullpointer.site/images/building.png)
 
 ## **`MyBatis`**的作用
 
@@ -118,4 +118,4 @@ Bean的定义太复杂。简单来说，就是对象，就是程序中干活的�
 
 有任何疑问都可以留言公众号（idea小时），看到消息我会第一时间回复。对于问的多的问题，我会出文章解答的！
 
-![qrcode](../.vuepress/public/images/qrcode.png)
+![qrcode](https://www.nullpointer.site/images/qrcode.png)

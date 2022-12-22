@@ -24,7 +24,7 @@ tags:
 
 [ToDesk（远程桌面）](https://www.todesk.com/)
 
-![todesk](../.vuepress/public/images/todesk.png)
+![todesk](https://www.nullpointer.site/images/todesk.png)
 
 
 
@@ -36,7 +36,7 @@ tags:
 
 [135微信图文编辑器](https://www.135editor.com/)
 
-![Aconvert](../.vuepress/public/images/we-edit.png)
+![Aconvert](https://www.nullpointer.site/images/we-edit.png)
 
 
 
@@ -48,7 +48,7 @@ tags:
 
 [PPT超级市场](https://www.pptsupermarket.com/)
 
-![Aconvert](../.vuepress/public/images/super-ppt.png)
+![Aconvert](https://www.nullpointer.site/images/super-ppt.png)
 
 
 
@@ -64,7 +64,7 @@ Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档]
 
 [aconvert](https://www.aconvert.com/cn/)
 
-![Aconvert](../.vuepress/public/images/aconvert.png)
+![Aconvert](https://www.nullpointer.site/images/aconvert.png)
 
 
 
@@ -80,7 +80,7 @@ Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档]
 
 [AlternativeTo](https://alternativeto.net/)
 
-![alternativeto](../.vuepress/public/images/alternativeto.png)
+![alternativeto](https://www.nullpointer.site/images/alternativeto.png)
 
 
 
@@ -96,7 +96,7 @@ Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档]
 
 [pixabay](https://pixabay.com/)
 
-![pixabay](../.vuepress/public/images/pixabay.png)
+![pixabay](https://www.nullpointer.site/images/pixabay.png)
 
 
 
@@ -106,7 +106,7 @@ Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档]
 
 同样高质量的图片网站，更多格式。
 
-[freepik](https://www.freepik.com/)![pixabay](../.vuepress/public/images/freepik.png)
+[freepik](https://www.freepik.com/)![pixabay](https://www.nullpointer.site/images/freepik.png)
 
 
 
@@ -118,7 +118,7 @@ Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档]
 
 [Process On官网](https://www.processon.com/)
 
-![dribbble](../.vuepress/public/images/processon.png)
+![dribbble](https://www.nullpointer.site/images/processon.png)
 
 
 
@@ -142,7 +142,7 @@ Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档]
 
 [Zlibrary官网](https://zh.usa1lib.org/)
 
-![zlibrary](../.vuepress/public/images/zlibrary.png)
+![zlibrary](https://www.nullpointer.site/images/zlibrary.png)
 
 
 
@@ -154,7 +154,7 @@ Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档]
 
 [tinypng官网](https://tinypng.com/)
 
-![dribbble](../.vuepress/public/images/tinypng.png)
+![dribbble](https://www.nullpointer.site/images/tinypng.png)
 
 
 
@@ -168,7 +168,7 @@ Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档]
 
 [谷歌学术搜索镜像地址](http://scholar.scqylaw.com/)
 
-![googlestudy](../.vuepress/public/images/googlestudy.png)
+![googlestudy](https://www.nullpointer.site/images/googlestudy.png)
 
 
 
@@ -180,7 +180,7 @@ Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档]
 
 [SCI-HUB地址](https://sci-hub.yncjkj.com/)
 
-![googlestudy](../.vuepress/public/images/SCIHUB.png)
+![googlestudy](https://www.nullpointer.site/images/SCIHUB.png)
 
 
 
@@ -196,7 +196,7 @@ Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档]
 
 [JG 经管之家网址](https://bbs.pinggu.org/)
 
-![jingguanzhijia](../.vuepress/public/images/jingguanzhijia.png)
+![jingguanzhijia](https://www.nullpointer.site/images/jingguanzhijia.png)
 
 
 
@@ -214,7 +214,7 @@ Aconvert.com在线转换各类[PDF](https://www.aconvert.com/cn/pdf/)，[文档]
 
 有任何疑问都可以留言公众号（idea小时），看到消息我会第一时间回复。对于问的多的问题，我会出文章解答的！
 
-![qrcode](../.vuepress/public/images/qrcode.png)
+![qrcode](https://www.nullpointer.site/images/qrcode.png)
 
 
 

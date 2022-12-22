@@ -63,4 +63,4 @@ tags:
 
 有任何疑问都可以留言公众号（idea小时），看到消息我会第一时间回复。对于问的多的问题，我会出文章解答的！
 
-![qrcode](../.vuepress/public/images/qrcode.png)
+![qrcode](https://www.nullpointer.site/images/qrcode.png)

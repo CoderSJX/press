@@ -8,7 +8,7 @@ tags:
  - 深入理解
 ---
 
-![proxy-mind](../.vuepress/public/images/proxy.png)
+![proxy-mind](https://www.nullpointer.site/images/proxy.png)
 
 ## 描述
 

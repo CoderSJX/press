@@ -27,5 +27,5 @@ https://site.sciping.com/
 
 [科塔学术](https://site.sciping.com/)
 
-![keta](../.vuepress/public/images/keta.png)
+![keta](https://www.nullpointer.site/images/keta.png)
 

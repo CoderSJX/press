@@ -34,19 +34,19 @@ WHERE
 
 但是我把这个语句放进VsCode中就出现了这个提示。
 
-![vscode-nbsp](../.vuepress/public/images/vscode-nbsp.png)
+![vscode-nbsp](https://www.nullpointer.site/images/vscode-nbsp.png)
 
 什么？这里还有个字符？我怎么看不到？
 
 我又放进了WebStorm里。
 
-![webstorm-nbsp](../.vuepress/public/images/webstorm-nbsp.png)
+![webstorm-nbsp](https://www.nullpointer.site/images/webstorm-nbsp.png)
 
 还真有这个字符。
 
 又去找了找这个字符是啥。
 
-![unicode-nbsp](../.vuepress/public/images/unicode-nbsp.png)
+![unicode-nbsp](https://www.nullpointer.site/images/unicode-nbsp.png)
 
 好嘛，是个空格。
 
