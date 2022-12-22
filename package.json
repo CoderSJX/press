@@ -4,25 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "author": "sjx",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress-reco/vuepress-plugin-back-to-top": "^1.6.0",
-    "@vuepress-reco/vuepress-plugin-comments": "^1.6.0",
-    "@vuepress-reco/vuepress-plugin-loading-page": "^1.6.0",
-    "@vuepress-reco/vuepress-plugin-pagation": "^1.6.0",
-    "@vuepress/plugin-medium-zoom": "^1.9.7",
-    "@vuepress/plugin-nprogress": "^1.9.7",
-    "@vuepress/plugin-pwa": "^1.9.7",
-    "vuepress": "^1.9.7",
-    "vuepress-plugin-clean-urls": "^1.1.2",
-    "vuepress-plugin-fulltext-search": "^2.2.1",
-    "vuepress-theme-reco": "^1.6.11"
+    "vuepress": "^1.9.7"
   },
-  "dependencies": {
-    "moment": "^2.29.1"
-  }
+  "dependencies": {}
 }
